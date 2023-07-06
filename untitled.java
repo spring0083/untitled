@@ -4,22 +4,23 @@ import java.util.List;
 public class untitled {
     public static void main(String[] args) throws CloneNotSupportedException {
 //        ShoppingCart[] cartA = { new ShoppingCart("apple", 3000l), new ShoppingCart("banana", 5000l) };
-//        ShoppingCart[] cartB = cartA;
+//        ShoppingCart[] cartB = cartA; // 얕은 복사
+//        ShoppingCart[] cartB = cartA.clone(); //깊은 복사
         List<ShoppingCart> cartA = new ArrayList<>();
         cartA.add(new ShoppingCart("apple", 3000l));
         cartA.add(new ShoppingCart("banana", 5000l));
-
-        List<ShoppingCart> cartB = cartA;
+        List<ShoppingCart> cartB = cartA; // 얕은 복사
+//        List<ShoppingCart> cartB = new ArrayList<>(cartA); // 깊은 복사
 
         System.out.println("cartA " + Integer.toHexString(cartA.hashCode()));
 //        System.out.println("cartA[0] " + Integer.toHexString(cartA[0].hashCode()));
         System.out.println("cartA[0] " + Integer.toHexString(cartA.get(0).hashCode()));
-        for (ShoppingCart a: cartA){
+        for (ShoppingCart a : cartA) {
             System.out.println(a.toString());
         }
 
         System.out.println("cartB " + Integer.toHexString(cartB.hashCode()));
-        for (ShoppingCart b: cartB){
+        for (ShoppingCart b : cartB) {
             System.out.println(b.toString());
         }
         System.out.println();
@@ -31,12 +32,12 @@ public class untitled {
         System.out.println("cartA " + Integer.toHexString(cartA.hashCode()));
 //        System.out.println("cartA[0] " + Integer.toHexString(cartA[0].hashCode()));
         System.out.println("cartA[0] " + Integer.toHexString(cartA.get(0).hashCode()));
-        for (ShoppingCart a: cartA){
+        for (ShoppingCart a : cartA) {
             System.out.println(a.toString());
         }
 
         System.out.println("cartB " + Integer.toHexString(cartB.hashCode()));
-        for (ShoppingCart b: cartB){
+        for (ShoppingCart b : cartB) {
             System.out.println(b.toString());
         }
         System.out.println();
@@ -47,11 +48,11 @@ public class untitled {
         System.out.println("cartA " + Integer.toHexString(cartA.hashCode()));
 //        System.out.println("cartA[0] " + Integer.toHexString(cartA[0].hashCode()));
         System.out.println("cartA[0] " + Integer.toHexString(cartA.get(0).hashCode()));
-        for (ShoppingCart a: cartA){
+        for (ShoppingCart a : cartA) {
             System.out.println(a.toString());
         }
         System.out.println("cartB " + Integer.toHexString(cartB.hashCode()));
-        for (ShoppingCart b: cartB){
+        for (ShoppingCart b : cartB) {
             System.out.println(b.toString());
         }
         System.out.println();
@@ -70,11 +71,11 @@ public class untitled {
         System.out.println("cartA " + Integer.toHexString(cartA.hashCode()));
 //        System.out.println("cartA[0] " + Integer.toHexString(cartA[0].hashCode()));
         System.out.println("cartA[0] " + Integer.toHexString(cartA.get(0).hashCode()));
-        for (ShoppingCart a: cartA){
+        for (ShoppingCart a : cartA) {
             System.out.println(a.toString());
         }
         System.out.println("cartB " + Integer.toHexString(cartB.hashCode()));
-        for (ShoppingCart b: cartB){
+        for (ShoppingCart b : cartB) {
             System.out.println(b.toString());
         }
     }
